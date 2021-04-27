@@ -13,7 +13,6 @@ var transport = nodemailer.createTransport({
       }
 });
 
-//aqui esta o problema
 const handlebarOptions = {
   viewEngine: {
     extName: '.html',

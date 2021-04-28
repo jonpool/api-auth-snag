@@ -5,11 +5,11 @@ const nodemailer = require('nodemailer');
 const {host, port, user, pass} = require("../config/mail.json")
 
 var transport = nodemailer.createTransport({
-  host,
-  port,
+  host:process.env.HOST,
+  port:process.env.PORT,
   auth:{
-        user,
-        pass
+        user:process.env.USER,
+        pass:process.env.PASS
       }
 });
 

@@ -10,7 +10,7 @@ const User = require('../models/User');
 const router = express.Router();
 
 function generateToken(params = {}){
-  return jwt.sign(params, authconfig.secret,{
+  return jwt.sign(params, process.env.APP_SECRET_KEY,{
      expiresIn:86400,
   });
 }
